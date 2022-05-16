@@ -30,6 +30,6 @@ public class Main {
             System.out.println(resSplit[0].trim());
             System.out.println(resSplit[1].trim());
         }
-        
+        System.out.println("Complete!");
     }
 }
