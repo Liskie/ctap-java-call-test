@@ -9,7 +9,7 @@ public class Main {
     public static List<String> runShell(String shStr) {
         List<String> strList = new ArrayList<>();
         try {
-            Process process = Runtime.getRuntime().exec(new String[]{"/bin/sh", "-c", shStr}, null, new File("./"));
+            Process process = Runtime.getRuntime().exec(new String[]{"/bin/sh", "-c", shStr}, null, new File("./main/"));
             InputStreamReader ir = new InputStreamReader(process.getInputStream());
             LineNumberReader input = new LineNumberReader(ir);
             String line;
@@ -24,7 +24,7 @@ public class Main {
     }
     
     public static void main(String[] args) {
-        String shStr = "main/main \"你好世界！\"";
+        String shStr = "main \"你好世界！\"";
 //        String testString = "touch testfile.txt";
         List<String> allRes = runShell(shStr);
         System.out.println(allRes);
